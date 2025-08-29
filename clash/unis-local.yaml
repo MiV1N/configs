@@ -18,3 +18,6 @@ proxy-groups:
 
 rules:
   - IP-CIDR,192.168.110.0/24,Local-Proxy,no-resolve 
+
+dns:
+  enable: true
