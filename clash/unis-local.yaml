@@ -1,0 +1,14 @@
+proxies:
+  - name: "socks5-local-proxy" # 代理名称
+    type: socks5 # 代理类型: http, socks5, ss, vmess, trojan，根据实际情况选择
+    server: 10.210.14.44 
+    port: 1080 
+
+proxy-groups:
+  - name: "loccal-proxy" # 代理组名称 
+    type: select # 代理组类型: select (手动选择), url-test (自动测速), fallback
+    proxies:
+      - "socks5-local-proxy" 
+
+rules:
+  - IP-CIDR,192.168.110.0/24,Local-Proxy,no-resolve 
