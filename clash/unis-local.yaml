@@ -1,8 +1,12 @@
-port: 7890  
-socks-port: 7891  
-allow-lan: false  
-mode: rule  
-log-level: info  
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+geodata-mode: true
+geo-auto-update: true
+geodata-loader: standard
+geo-update-interval: 24 
 
 proxies:
   - name: "socks5-local-proxy" # 代理名称
