@@ -1,0 +1,6 @@
+proxies:
+  - name: "🛠️ 内网代理"
+    type: socks5
+    server: 10.210.14.44
+    port: 1080
+    udp: true
