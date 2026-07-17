@@ -74,136 +74,16 @@ geox-url:
 #   'alpha.clash.dev': '::1'
 
 dns:
-  enable: true
-  listen: 127.0.0.1:1053
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  # default-nameserver:
-    # - 119.29.29.29
-    # - 114.114.114.114
-  # nameserver:
-    # - https://doh.pub/dns-query
-  # fallback:
-    # - https://dns.alidns.com/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 127.0.0.1/8
-  fake-ip-filter:
-    - dns.msftncsi.com
-    - www.msftncsi.com
-    - www.msftconnecttest.com
-    - +.stun.*.*
-    - +.stun.*.*.*
-    - +.stun.*.*.*.*
-    - +.stun.*.*.*.*.*
-    - "*.n.n.srv.nintendo.net"
-    - +.stun.playstation.net
-    - xbox.*.*.microsoft.com
-    - "*.*.xboxlive.com"
-    - "*.msftncsi.com"
-    - "*.msftconnecttest.com"
-    - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time-ios.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - music.163.com
-    - "*.music.163.com"
-    - "*.126.net"
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - "*.kuwo.cn"
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - y.qq.com
-    - "*.y.qq.com"
-    - streamoc.music.tc.qq.com
-    - mobileoc.music.tc.qq.com
-    - isure.stream.qqmusic.qq.com
-    - dl.stream.qqmusic.qq.com
-    - aqqmusic.tc.qq.com
-    - amobile.music.tc.qq.com
-    - "*.xiami.com"
-    - "*.music.migu.cn"
-    - music.migu.cn
-    - +.msftconnecttest.com
-    - +.msftncsi.com
-    - localhost.ptlogin2.qq.com
-    - localhost.sec.qq.com
-    - +.qq.com
-    - +.tencent.com
-    - +.srv.nintendo.net
-    - "*.n.n.srv.nintendo.net"
-    - +.stun.playstation.net
-    - xbox.*.*.microsoft.com
-    - "*.*.xboxlive.com"
-    - xbox.*.microsoft.com
-    - xnotify.xboxlive.com
-    - +.battlenet.com.cn
-    - +.wotgame.cn
-    - +.wggames.cn
-    - +.wowsgame.cn
-    - +.wargaming.net
-    - proxy.golang.org
-    - heartbeat.belkin.com
-    - "*.linksys.com"
-    - "*.linksyssmartwifi.com"
-    - "*.router.asus.com"
-    - mesu.apple.com
-    - swscan.apple.com
-    - swquery.apple.com
-    - swdownload.apple.com
-    - swcdn.apple.com
-    - swdist.apple.com
-    - lens.l.google.com
-    - stun.l.google.com
-    - +.nflxvideo.net
-    - "*.square-enix.com"
-    - "*.finalfantasyxiv.com"
-    - "*.ffxiv.com"
-    - "*.ff14.sdo.com"
-    - ff.dorado.sdo.com
-    - "*.mcdn.bilivideo.cn"
-    - +.media.dssott.com
-    - shark007.net
-    - +.cmbchina.com
-    - +.cmbimg.com
-    - local.adguard.org
-    - +.sandai.net
-    - +.n0808.com
+    enable: true
+    listen: '127.0.0.1:1053'
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    default-nameserver: [119.29.29.29, 114.114.114.114]
+    nameserver: ['https://doh.pub/dns-query']
+    fallback: ['https://dns.alidns.com/dns-query']
+    nameserver-policy: { +.526537.xyz: ['https://38.76.213.238:8080/dns-query', 'https://149.104.6.147:8080/dns-query'] }
+    fallback-filter: { geoip: true, geoip-code: CN, ipcidr: [240.0.0.0/4, 127.0.0.1/8] }
+    fake-ip-filter: [dns.msftncsi.com, www.msftncsi.com, www.msftconnecttest.com, '+.stun.*.*', '+.stun.*.*.*', '+.stun.*.*.*.*', '+.stun.*.*.*.*.*', '*.n.n.srv.nintendo.net', +.stun.playstation.net, 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.msftncsi.com', '*.msftconnecttest.com', '*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', time-ios.apple.com, 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.msftconnecttest.com, +.msftncsi.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com, +.qq.com, +.tencent.com, +.srv.nintendo.net, '*.n.n.srv.nintendo.net', +.stun.playstation.net, 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', 'xbox.*.microsoft.com', xnotify.xboxlive.com, +.battlenet.com.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, proxy.golang.org, heartbeat.belkin.com, '*.linksys.com', '*.linksyssmartwifi.com', '*.router.asus.com', mesu.apple.com, swscan.apple.com, swquery.apple.com, swdownload.apple.com, swcdn.apple.com, swdist.apple.com, lens.l.google.com, stun.l.google.com, +.nflxvideo.net, '*.square-enix.com', '*.finalfantasyxiv.com', '*.ffxiv.com', '*.ff14.sdo.com', ff.dorado.sdo.com, '*.mcdn.bilivideo.cn', +.media.dssott.com, shark007.net, +.cmbchina.com, +.cmbimg.com, local.adguard.org, +.sandai.net, +.n0808.com, time.apple.com, time.asia.apple.com, time.euro.apple.com, time1.apple.com, time2.apple.com, time3.apple.com, time4.apple.com, time5.apple.com, time6.apple.com, time7.apple.com]
 
 # 1. clash DNS 请求逻辑：
 #   (1) 当访问一个域名时， nameserver 与 fallback 列表内的所有服务器并发请求，得到域名对应的 IP 地址。
